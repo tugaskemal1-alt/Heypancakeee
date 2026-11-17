@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Fitur responsive: lebar halaman mengikuti lebar layar HP -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Hey Pancake. Web e-commerce dengan HTML, CSS, dan JavaScript murni.">
+    <title>Katalog – Hey Pancake</title>
+    <link rel="icon" type="image/png" href="assets/Logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== MENU HEADER ===== -->
+    <header class="kepala">
+        <div class="wadah kepala-isi">
+            <!-- Fitur logo -->
+            <a href="#/" class="logo" aria-label="Hey Pancake, ke halaman katalog">
+                <img src="assets/Logo.png" alt="" width="44" height="44">
+                <span class="logo-nama">Hey Pancake</span>
+            </a>
+
+            <!-- Fitur pencarian menu -->
+            <form class="cari" id="form-cari" role="search">
+                <label class="hanya-pembaca-layar" for="input-cari">Cari menu</label>
+                <input type="search" id="input-cari" autocomplete="off">
+                <button type="submit" class="tombol-cari">
+                    <img src="assets/cari.png" alt="" width="16" height="16">
+                    <span>Cari</span>
+                </button>
+            </form>
+
+            <!-- Fitur navigasi -->
+            <nav class="navigasi" aria-label="Navigasi utama">
+                <a href="#/keranjang" data-nav="keranjang" class="nav-keranjang">
+                    <img src="assets/keranjang.png" alt="" width="20" height="20">
+                    <span>Keranjang</span>
+                    <span class="lencana" id="lencana-keranjang">0</span>
+                </a>
+                <a href="#/login" data-nav="login" id="nav-masuk">Masuk</a>
+                <button type="button" id="tombol-keluar">Keluar</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== ISI HALAMAN ===== -->
+    <main class="wadah">
+
+        <!-- ===== MENU KATALOG ===== -->
+        <section id="halaman-katalog">
+            <h1 class="hanya-pembaca-layar">Katalog menu Hey Pancake</h1>
+
+            <div class="tata-katalog">
+                <!-- Fitur filter kategori -->
+                <aside class="sisi" aria-label="Kategori menu">
+                    <h2 class="sisi-judul">
+                        <img src="assets/Logo.png" alt="" width="16" height="16">
+                        Kategori menu
+                    </h2>
+                    <div class="kategori">
+                        <label class="sisi-item"><input type="radio" name="kategori" value="semua" checked><span>Semua
+                                Menu</span></label>
+                        <label class="sisi-item"><input type="radio" name="kategori" value="Selai Cruncy"><span>Selai
+                                Cruncy</span></label>
+                        <label class="sisi-item"><input type="radio" name="kategori" value="Selai Biasa"><span>Selai
+                                Biasa</span></label>
+                    </div>
+                </aside>
+
+                <!-- Fitur daftar kartu menu -->
+                <div class="hasil">
+                    <div class="grid-produk" id="grid-produk">
+                         <!-- Fitur kartu menu 2: coco c -->
+                         <article class="kartu" data-id="1" data-nama="Choco c" data-kategori="Selai Cruncy"
+                         data-harga="17000"
+                         data-deskripsi="Disetiap gigitan ada kebahagiaan.">
+                         <a class="kartu-tautan" href="#/detail/1">
+                             <div class="kartu-gambar">
+                                 <div class="kartu-bingkai bingkai-foto">
+                                     <img class="foto" src="assets/choco c.png" alt="">
+                                     <strong class="kartu-label label-foto">Choco cruncy</strong>
+                                 </div>
+                             </div>
+                             <div class="kartu-isi">
+                                 <h2 class="kartu-nama">Choco cruncy</h2>
+                                 <p class="kartu-catatan">Pancake Jepang super fluffy dengan selai cokelat renyah melimpah yang lumer sekaligus kriuk di mulut.</p>
+                             </div>
+                         </a>
+                         <div class="kartu-bawah">
+                             <p class="harga">Rp17.000</p>
+                         </div>
+                     </article>
+
+                        <!-- Fitur kartu menu 2: tiramisu  c -->
+                        <article class="kartu" data-id="2" data-nama="Tiramisu cruncy" data-kategori="Selai Cruncy"
+                            data-harga="17000"
+                            data-deskripsi="Disetiap gigitan ada kebahagiaan.">
+                            <a class="kartu-tautan" href="#/detail/2">
+                                <div class="kartu-gambar">
+                                    <div class="kartu-bingkai bingkai-foto">
+                                        <img class="foto" src="assets/tiramisu c.png" alt="">
+                                        <strong class="kartu-label label-foto">Tiramisu cruncy</strong>
+                                    </div>
+                                </div>
+                                <div class="kartu-isi">
+                                    <h2 class="kartu-nama">Tiramisu cruncy</h2>
+                                    <p class="kartu-catatan">Pancake fluffy dengan selai tiramisu wangi kopi yang punya sensasi kriuk di setiap gigitan.</p>
+                                </div>
+                            </a>
+                            <div class="kartu-bawah">
+                                <p class="harga">Rp17.000</p>
+                            </div>
+                        </article>
+
+                        <!-- Fitur kartu menu 3: gren tee c -->
+                        <article class="kartu" data-id="3" data-nama="Green tea cruncy"
+                            data-kategori="Selai Cruncy" data-harga="17000"
+                            data-deskripsi="Disetiap gigitan ada kebahagiaan.">
+                            <a class="kartu-tautan" href="#/detail/3">
+                                <div class="kartu-gambar">
+                                    <div class="kartu-bingkai bingkai-foto">
+                                        <img class="foto" src="assets/green tea c.png" alt="">
+                                        <strong class="kartu-label label-foto">Green tea cruncy</strong>
+                                    </div>
+                                </div>
+                                <div class="kartu-isi">
+                                    <h2 class="kartu-nama">Green tea cruncy</h2>
+                                    <p class="kartu-catatan"> Wangi teh hijau autentik yang manisnya pas, lengkap dengan kriuk sereal yang renyah.</p>
+                                </div>
+                            </a>
+                            <div class="kartu-bawah">
+                                <p class="harga">Rp17.000</p>
+                            </div>
+                        </article>
+
+                        <!-- Fitur kartu menu 4: Coklat -->
+                        <article class="kartu" data-id="4" data-nama="Cokelat" data-kategori="Selai Biasa"
+                            data-harga="15000"
+                            data-deskripsi="Disetiap gigitan ada kebahagiaan.">
+                            <a class="kartu-tautan" href="#/detail/4">
+                                <div class="kartu-gambar">
+                                    <div class="kartu-bingkai bingkai-foto">
+                                        <img class="foto" src="assets/coklat.png" alt="">
+                                        <strong class="kartu-label label-foto">Cokelat</strong>
+                                    </div>
+                                </div>
+                                <div class="kartu-isi">
+                                    <h2 class="kartu-nama">Cokelat</h2>
+                                    <p class="kartu-catatan">Manis cokelat klasik yang pekat, lembut, dan lumer maksimal di setiap suapan.</p>
+                                </div>
+                            </a>
+                            <div class="kartu-bawah">
+                                <p class="harga">Rp15.000</p>
+                            </div>
+                        </article>
+
+                        <!-- Fitur kartu menu 5: Tiramisu -->
+                        <article class="kartu" data-id="5" data-nama="Tiramisu" data-kategori="Selai Biasa"
+                            data-harga="15000"
+                            data-deskripsi="Disetiap gigitan ada kebahagiaan.">
+                            <a class="kartu-tautan" href="#/detail/5">
+                                <div class="kartu-gambar">
+                                    <div class="kartu-bingkai bingkai-foto">
+                                        <img class="foto" src="assets/tiramisu.png" alt="">
+                                        <strong class="kartu-label label-foto">Tiramisu</strong>
+                                    </div>
+                                </div>
+                                <div class="kartu-isi">
+                                    <h2 class="kartu-nama">Tiramisu</h2>
+                                    <p class="kartu-catatan">Cita rasa kopi dan krim keju yang elegan dengan manis yang pas.</p>
+                                </div>
+                            </a>
+                            <div class="kartu-bawah">
+                                <p class="harga">Rp15.000</p>
+                            </div>
+                        </article>
+
+                        <!-- Fitur kartu menu 6: Strobery -->
+                        <article class="kartu" data-id="6" data-nama="Stroberi" data-kategori="Selai Biasa"
+                            data-harga="15000"
+                            data-deskripsi="Disetiap gigitan ada kebahagiaan.">
+                            <a class="kartu-tautan" href="#/detail/6">
+                                <div class="kartu-gambar">
+                                    <div class="kartu-bingkai bingkai-foto">
+                                        <img class="foto" src="assets/strobery.png" alt="">
+                                        <strong class="kartu-label label-foto">Stroberi</strong>
+                                    </div>
+                                </div>
+                                <div class="kartu-isi">
+                                    <h2 class="kartu-nama">Stroberi</h2>
+                                    <p class="kartu-catatan">Perpaduan rasa manis dan asam segar buah stroberi yang bikin nagih.</p>
+                                </div>
+                            </a>
+                            <div class="kartu-bawah">
+                                <p class="harga">Rp15.000</p>
+                            </div>
+                        </article>
+
+                        <!-- Fitur kartu menu 7: Taro -->
+                        <article class="kartu" data-id="7" data-nama="Taro" data-kategori="Selai Biasa"
+                            data-harga="15000"
+                            data-deskripsi="Disetiap gigitan ada kebahagiaan.">
+                            <a class="kartu-tautan" href="#/detail/7">
+                                <div class="kartu-gambar">
+                                    <div class="kartu-bingkai bingkai-foto">
+                                        <img class="foto" src="assets/taro.png" alt="">
+                                        <strong class="kartu-label label-foto">Taro</strong>
+                                    </div>
+                                </div>
+                                <div class="kartu-isi">
+                                    <h2 class="kartu-nama">Taro</h2>
+                                    <p class="kartu-catatan">Aroma ubi ungu khas yang manis, lembut, dan creamy.</p>
+                                </div>
+                            </a>
+                            <div class="kartu-bawah">
+                                <p class="harga">Rp15.000</p>
+                            </div>
+                        </article>
+
+                        <!-- Fitur kartu menu 8: gren tea -->
+                        <article class="kartu" data-id="8" data-nama="Green tea" data-kategori="Selai Biasa"
+                            data-harga="15000"
+                            data-deskripsi="Disetiap gigitan ada kebahagiaan.">
+                            <a class="kartu-tautan" href="#/detail/8">
+                                <div class="kartu-gambar">
+                                    <div class="kartu-bingkai bingkai-foto">
+                                        <img class="foto" src="assets/green tea.png" alt="">
+                                        <strong class="kartu-label label-foto">Green tea</strong>
+                                    </div>
+                                </div>
+                                <div class="kartu-isi">
+                                    <h2 class="kartu-nama">Green tea</h2>
+                                    <p class="kartu-catatan">• Wangi teh hijau autentik dengan sentuhan rasa manis yang menenangkan.</p>
+                                </div>
+                            </a>
+                            <div class="kartu-bawah">
+                                <p class="harga">Rp15.000</p>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- Fitur pesan menu tidak ditemukan -->
+                    <p class="kosong" id="katalog-kosong">Menu tidak ditemukan. Coba kata lain atau pilih kategori lain.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+
+<!-- ===== MENU LOGIN ===== -->
+        <section id="halaman-login">
+            <div class="masuk">
+                <!-- Fitur foto login -->
+                <div class="masuk-visual">
+                    <img src="assets/choco c.png" alt="">
+                </div>
+
+                <!-- Fitur formulir masuk -->
+                <form class="masuk-form" id="form-login">
+                    <!-- Fitur logo dan judul login -->
+                    <img class="masuk-logo" src="assets/Logo.png" alt="Hey Pancake"
+                        width="72" height="72">
+                    <h1>Selamat datang</h1>
+                    <p class="masuk-info">Masuk ke akunmu untuk melanjutkan.</p>
+
+                    <div class="kolom-isian">
+                        <!-- Fitur isian username -->
+                        <label for="isian-username">Username</label>
+                        <input type="text" id="isian-username" autocomplete="username" required>
+                        <p class="pesan-galat">Username wajib diisi.</p>
+                    </div>
+
+                    <div class="kolom-isian">
+                        <!-- Fitur isian password dan pesan login salah -->
+                        <label for="isian-password">Password</label>
+                        <input type="password" id="isian-password" autocomplete="current-password" required>
+                        <p class="pesan-galat">Password wajib diisi.</p>
+                        <p class="pesan-galat" id="login-salah" hidden>Username atau password salah.</p>
+                    </div>
+
+                    <!-- Fitur tombol masuk -->
+                    <button type="submit" class="tombol tombol-utama tombol-lebar tombol-kirim">Masuk</button>
+                    <!-- Fitur kembali ke katalog -->
+                    <a class="masuk-kembali" href="#/">← Kembali ke katalog</a>
+                </form>
+            </div>
+        </section>
+
+        <!-- ===== MENU DETAIL MENU ===== -->
+        <section id="halaman-detail">
+            <!-- Fitur kembali ke katalog -->
+            <a class="tautan-kembali" href="#/">← Kembali ke katalog</a>
+            <!-- Fitur pesan menu tidak ditemukan -->
+            <p class="kosong" id="detail-tidak-ada" hidden>Menu tidak ditemukan.</p>
+
+            <article class="detail" id="isi-detail">
+                <!-- Fitur foto menu -->
+                <div class="detail-gambar">
+                    <img class="foto" id="detail-gambar" src="" alt="">
+                </div>
+
+                <div class="detail-info">
+                    <!-- Fitur nama dan deskripsi menu -->
+                    <h1 id="detail-nama"></h1>
+                    <p class="detail-deskripsi" id="detail-deskripsi"></p>
+
+                    <!-- Fitur kasir -->
+                    <div class="kasir" role="group" aria-label="Rincian pesanan">
+                        <div class="kasir-judul">
+                            <span>Item</span>
+                            <span>Jumlah</span>
+                            <span>Subtotal</span>
+                        </div>
+                        <div class="kasir-baris">
+                            <div class="kasir-info">
+                                <span class="kasir-nama" id="kasir-nama"></span>
+                                <span class="kasir-harga" id="kasir-harga"></span>
+                            </div>
+                            <div class="kasir-jumlah">
+                                <button type="button" id="tombol-kurang" aria-label="Kurangi jumlah">−</button>
+                                <label class="hanya-pembaca-layar" for="isian-jumlah">Jumlah</label>
+                                <input type="number" id="isian-jumlah" min="1" value="1">
+                                <button type="button" id="tombol-tambah" aria-label="Tambah jumlah">+</button>
+                            </div>
+                            <span class="kasir-subtotal total-teks"></span>
+                        </div>
+                        <div class="kasir-total">
+                            <span>Total bayar</span>
+                            <strong class="total-teks"></strong>
+                        </div>
+                    </div>
+
+                    <!-- Fitur tambah ke keranjang dan pesan sekarang -->
+                    <div class="detail-aksi">
+                        <button type="button" class="tombol-keranjang" id="tombol-keranjang">Tambah ke
+                            keranjang</button>
+                        <button type="button" class="tombol-pesan" id="tombol-pesan">
+                            <span class="total-teks"></span>
+                            <span>Pesan sekarang</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+ <!-- ===== MENU KERANJANG ===== -->
+        <section id="halaman-keranjang">
+            <h1 class="judul-halaman">Keranjang</h1>
+
+            <!-- Fitur keranjang kosong -->
+            <div class="kosong" id="keranjang-kosong">
+                <p>Keranjang masih kosong.</p>
+                <a class="tombol tombol-utama" href="#/">Mulai belanja</a>
+            </div>
+
+            <div class="dua-kolom" id="keranjang-isi">
+                <!-- Fitur daftar barang keranjang -->
+                <div class="daftar-keranjang" id="daftar-keranjang"></div>
+
+                <!-- Fitur ringkasan keranjang -->
+                <aside class="struk struk-menempel" aria-label="Ringkasan keranjang">
+                    <h2>Ringkasan</h2>
+                    <div class="struk-baris"><span>Jumlah barang</span><span id="keranjang-jumlah">0</span></div>
+                    <div class="struk-baris struk-total"><span>Total harga</span><span
+                            id="keranjang-subtotal">Rp0</span></div>
+                    <div class="struk-aksi">
+                        <a class="tombol tombol-utama" href="#/checkout">Lanjut ke checkout</a>
+                        <a class="tombol" href="#/">Lanjut belanja</a>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+
+
+        <!-- ===== MENU CHECKOUT ===== -->
+        <section id="halaman-checkout">
+            <!-- Fitur kembali ke keranjang -->
+            <a class="tautan-kembali" href="#/keranjang">← Kembali ke keranjang</a>
+            <h1 class="judul-halaman">Checkout</h1>
+
+            <div class="dua-kolom">
+                <form id="form-checkout">
+
+                    <!-- Fitur data pemesan -->
+                    <section class="kotak" aria-labelledby="judul-data">
+                        <h2 class="kotak-judul" id="judul-data"><span class="kotak-nomor">1</span>Kontak pemesan</h2>
+
+                        <div class="baris-isian">
+                            <div class="kolom-isian">
+                                <label for="isian-nama">Nama lengkap</label>
+                                <input type="text" id="isian-nama" autocomplete="name" required
+                                    pattern="[A-Za-z .'\-]{3,}">
+                                <p class="pesan-galat">Nama wajib diisi, minimal 3 huruf (hanya huruf dan spasi).</p>
+                            </div>
+                            <div class="kolom-isian">
+                                <label for="isian-hp">Nomor HP</label>
+                                <input type="tel" id="isian-hp" autocomplete="tel" required
+                                    pattern="(\+62|62|0)8[0-9]{8,11}">
+                                <p class="pesan-galat">Nomor HP wajib diisi, angka saja, diawali 08 atau +62.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Fitur alamat pengiriman -->
+                    <section class="kotak" aria-labelledby="judul-kirim">
+                        <h2 class="kotak-judul" id="judul-kirim"><span class="kotak-nomor">2</span>Alamat pengiriman
+                        </h2>
+
+                        <div class="kolom-isian">
+                            <label for="isian-alamat">Alamat lengkap</label>
+                            <textarea id="isian-alamat" rows="3" autocomplete="street-address" required
+                                minlength="10"></textarea>
+                            <p class="pesan-galat">Alamat wajib diisi lengkap (minimal 10 karakter).</p>
+                        </div>
+                        <div class="kolom-isian">
+                            <label for="isian-kota">Kecamatan / kota</label>
+                            <input type="text" id="isian-kota" autocomplete="address-level2" required minlength="3">
+                            <p class="pesan-galat">Kecamatan / kota wajib diisi.</p>
+                        </div>
+                    </section>
+
+                    <!-- Fitur metode pembayaran -->
+                    <section class="kotak" aria-labelledby="judul-bayar">
+                        <h2 class="kotak-judul" id="judul-bayar"><span class="kotak-nomor">3</span>Pembayaran</h2>
+
+                        <div class="kolom-isian">
+                            <label for="isian-pembayaran">Metode pembayaran</label>
+                            <select id="isian-pembayaran" required>
+                                <option value="">Pilih metode pembayaran</option>
+                                <option value="Tunai di kedai">Tunai di kedai</option>
+                                <option value="QRIS">QRIS</option>
+                                <option value="Transfer bank">Transfer bank</option>
+                            </select>
+                            <p class="pesan-galat">Pilih metode pembayaran.</p>
+                        </div>
+
+                        <div class="kolom-isian">
+                            <label for="isian-catatan">Catatan <span class="redup">(opsional)</span></label>
+                            <textarea id="isian-catatan" rows="2" maxlength="200"></textarea>
+                        </div>
+                    </section>
+                </form>
+
+                <!-- Fitur ringkasan pesanan dan tombol buat pesanan -->
+                <aside class="struk struk-menempel" aria-label="Ringkasan pesanan">
+                    <h2>Ringkasan pesanan</h2>
+                    <div class="daftar-ringkas" id="ringkasan-checkout"></div>
+                    <div class="struk-baris struk-total"><span>Total bayar</span><span id="checkout-total"></span></div>
+                    <button type="submit" form="form-checkout"
+                        class="tombol tombol-utama tombol-lebar tombol-kirim">Buat pesanan</button>
+                </aside>
+            </div>
+        </section>
+
+<!-- ===== MENU KONFIRMASI PESANAN ===== -->
+        <section id="halaman-sukses">
+            <!-- Fitur pesan pesanan tidak ditemukan -->
+            <p class="kosong" id="sukses-tidak-ada" hidden>
+                Pesanan tidak ditemukan. <a href="#/">Kembali ke katalog</a>
+            </p>
+
+            <div class="sukses" id="isi-sukses">
+                <!-- Fitur pesan pesanan berhasil dibuat -->
+                <div class="sukses-ikon" aria-hidden="true">🎉</div>
+                <h1>Pesanan berhasil dibuat!</h1>
+                <p id="sukses-pemesan"></p>
+                <!-- Fitur rincian pesanan yang baru dibuat -->
+                <div class="struk">
+                    <div class="daftar-ringkas" id="sukses-daftar"></div>
+                    <div class="struk-baris struk-total"><span>Total bayar</span><span id="sukses-total"></span></div>
+                </div>
+                <!-- Fitur tombol pesan lagi -->
+                <div class="sukses-tombol">
+                    <a class="tombol tombol-utama" href="#/">Pesan lagi</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+<!-- ===== MENU FOOTER ===== -->
+    <footer class="kaki">
+        <div class="wadah">
+            <div class="kaki-kolom">
+                <!-- Fitur profil kedai -->
+                <section>
+                    <p class="kaki-logo">
+                        <img src="assets/Logo.png" alt="" width="40" height="40">
+                        Hey Pancake
+                    </p>
+                    <p>Kami menyajikan Soufflé Pancake khas Jepang yang dibuat fresh setiap saat agar teksturnya tetap tebal, fluffy, dan lembut seperti awan. Nikmati perpaduan sempurna pancake hangat dengan pilihan isian Selai Lumer yang creamy atau Selai Crunchy yang renyah di setiap gigitan. Tersedia dalam 5 varian rasa favorit: Cokelat, Stroberi, Taro, Tiramisu, dan Green Tea. Pesan sekarang untuk teman santai atau mood booster harimu!.</p>
+                </section>
+
+                <!-- Fitur jam buka dan kontak -->
+                <section>
+                    <h2 class="kaki-judul">Jam buka &amp; kontak</h2>
+                    <dl class="kaki-daftar">
+                        <div>
+                            <dt>Senin – Jumat</dt>
+                            <dd>12.00 – 21.00 WIB</dd>
+                        </div>
+                        <div>
+                            <dt>Sabtu – Minggu</dt>
+                            <dd>10.00 – 21.00 WIB</dd>
+                        </div>
+                    </dl>
+                    <p class="kaki-info">Pesan online, ambil di kedai</p>
+                    <p class="kaki-info">Instagram: @Heypancake</p>
+                </section>
+
+                <!-- Fitur metode pembayaran -->
+                <section>
+                    <h2 class="kaki-judul">Metode pembayaran</h2>
+                    <p class="kaki-info">Menerima pembayaran tunai &amp; digital:</p>
+                    <ul class="kaki-bayar">
+                        <li>TUNAI</li>
+                        <li>QRIS</li>
+                        <li>TRANSFER</li>
+                    </ul>
+                </section>
+            </div>
+            <!-- Fitur hak cipta -->
+            <p class="kaki-hakcipta">2026@UKKPPLG</p>
+        </div>
+    </footer>
+
+    <!-- ===== TEMPLATE BARIS BARANG ===== -->
+    <template id="templat-baris">
+        <article class="baris-keranjang">
+            <div class="baris-gambar"><img class="foto" src="" alt=""></div>
+            <div class="baris-info">
+                <a href="#/"></a>
+                <p></p>
+            </div>
+            <div class="baris-aksi">
+                <div class="pengatur-jumlah">
+                    <button type="button" data-aksi="kurang" aria-label="Kurangi jumlah">−</button>
+                    <span class="jumlah"></span>
+                    <button type="button" data-aksi="tambah" aria-label="Tambah jumlah">+</button>
+                </div>
+                <p class="baris-subtotal"></p>
+                <button type="button" class="tombol-teks" data-aksi="hapus">Hapus</button>
+            </div>
+        </article>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
